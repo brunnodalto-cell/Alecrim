@@ -31,7 +31,7 @@ header {
     padding: 30px;
 
     background:
-    linear-gradient(rgba(25,75,40,.65), rgba(20,55,30,.8)),
+    linear-gradient(rgba(25,75,40,.7), rgba(20,55,30,.85)),
     url("https://images.unsplash.com/photo-1596547609652-9cf5d8e8b3d8?auto=format&fit=crop&w=1600&q=80");
 
     background-size: cover;
@@ -112,18 +112,6 @@ section {
     line-height: 1.8;
 }
 
-/* IMAGEM */
-.imagem {
-    display: block;
-    width: 100%;
-    max-width: 1000px;
-    height: 400px;
-    object-fit: cover;
-    margin: 35px auto;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px #0003;
-}
-
 /* CARDS */
 .cards {
     display: grid;
@@ -178,7 +166,7 @@ section {
     margin-bottom: 8px;
 }
 
-/* BOTÃO DO PLANTIO */
+/* BOTÃO */
 #botaoPasso {
     display: block;
     margin: 25px auto;
@@ -193,6 +181,15 @@ section {
 
 #botaoPasso:hover {
     background: #174a24;
+}
+
+/* CURIOSIDADE */
+.curiosidade {
+    background: #d9e96b;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 35px;
 }
 
 /* QUIZ */
@@ -227,15 +224,7 @@ section {
     font-size: 19px;
 }
 
-/* CURIOSIDADE */
-.curiosidade {
-    background: #d9e96b;
-    padding: 35px;
-    border-radius: 20px;
-    text-align: center;
-    margin-top: 35px;
-}
-
+/* RODAPÉ */
 footer {
     background: #174a24;
     color: white;
@@ -262,15 +251,13 @@ footer {
     section {
         padding: 50px 6%;
     }
-
-    .imagem {
-        height: 280px;
-    }
 }
 </style>
 </head>
 
 <body>
+
+<!-- CAPA -->
 
 <header>
 
@@ -279,8 +266,8 @@ footer {
 <h1>🌿 Mundo do Alecrim</h1>
 
 <p>
-Descubra o que é o alecrim e aprenda, de forma simples,
-como plantar e cuidar dessa planta aromática.
+Descubra o alecrim e aprenda como plantar,
+cultivar e cuidar dessa planta aromática.
 </p>
 
 <a href="#sobre" class="botao">
@@ -291,6 +278,8 @@ como plantar e cuidar dessa planta aromática.
 
 </header>
 
+
+<!-- MENU -->
 
 <nav>
 
@@ -311,20 +300,14 @@ como plantar e cuidar dessa planta aromática.
 
 <p class="texto">
 
-O alecrim é uma planta aromática conhecida atualmente pelo nome
-científico <i>Salvia rosmarinus</i>. Ele pertence à família
-Lamiaceae e possui folhas estreitas e bastante aromáticas.
+O alecrim é uma planta aromática conhecida pelo nome científico
+<i>Salvia rosmarinus</i>. Ele pertence à família Lamiaceae e possui
+folhas estreitas, alongadas e bastante aromáticas.
 
-É uma planta muito utilizada na culinária e também cultivada
-em jardins e vasos.
+É uma planta muito utilizada na culinária e também pode ser
+cultivada em jardins, hortas e vasos.
 
 </p>
-
-<img
-class="imagem"
-src="https://images.unsplash.com/photo-1596547609652-9cf5d8e8b3d8?auto=format&fit=crop&w=1200&q=80"
-alt="Planta de alecrim"
->
 
 </section>
 
@@ -342,10 +325,11 @@ alt="Planta de alecrim"
 <h3>🌱 Folhas</h3>
 
 <p>
-Suas folhas são estreitas, alongadas e possuem um aroma marcante.
+As folhas são estreitas, alongadas e possuem um aroma marcante.
 </p>
 
 </div>
+
 
 <div class="card">
 
@@ -357,23 +341,25 @@ O alecrim gosta de locais bem iluminados e com bastante luz solar.
 
 </div>
 
+
 <div class="card">
 
 <h3>🌸 Flores</h3>
 
 <p>
-Pode produzir pequenas flores em tons azulados, lilases ou
-esbranquiçados.
+A planta pode produzir pequenas flores em tons azulados,
+lilases ou esbranquiçados.
 </p>
 
 </div>
+
 
 <div class="card">
 
 <h3>🌿 Aroma</h3>
 
 <p>
-Seu aroma característico está relacionado aos óleos essenciais
+Seu cheiro característico está relacionado aos óleos essenciais
 presentes na planta.
 </p>
 
@@ -392,8 +378,7 @@ presentes na planta.
 
 <p class="texto">
 
-Você pode plantar alecrim em um vaso ou diretamente no jardim.
-Confira o passo a passo:
+Siga os passos abaixo para plantar seu próprio alecrim.
 
 </p>
 
@@ -404,8 +389,8 @@ Confira o passo a passo:
 <h3>1️⃣ Escolha o local</h3>
 
 <p>
-Escolha um lugar bem iluminado, de preferência onde a planta
-receba bastante sol.
+Escolha um local bem iluminado, onde a planta possa receber
+bastante luz solar.
 </p>
 
 </div>
@@ -413,11 +398,11 @@ receba bastante sol.
 
 <div class="passo">
 
-<h3>2️⃣ Prepare o vaso</h3>
+<h3>2️⃣ Escolha o vaso</h3>
 
 <p>
-Use um vaso com furos na parte inferior para permitir que
-o excesso de água escorra.
+Se for plantar em vaso, escolha um recipiente que tenha
+furos na parte inferior.
 </p>
 
 </div>
@@ -428,8 +413,8 @@ o excesso de água escorra.
 <h3>3️⃣ Prepare a terra</h3>
 
 <p>
-Utilize um substrato ou solo que tenha boa drenagem.
-Evite terra que fique constantemente encharcada.
+Use um solo fértil e com boa drenagem. Evite deixar a terra
+constantemente encharcada.
 </p>
 
 </div>
@@ -452,8 +437,7 @@ de uma planta saudável.
 <h3>5️⃣ Regue</h3>
 
 <p>
-Faça uma rega moderada. Espere o solo perder parte da umidade
-antes de regar novamente.
+Regue moderadamente. Evite colocar água em excesso.
 </p>
 
 </div>
@@ -462,7 +446,7 @@ antes de regar novamente.
 
 
 <button id="botaoPasso">
-🌱 Mostrar dica de plantio
+🌱 Mostrar dica
 </button>
 
 <p id="dica" class="texto"></p>
@@ -474,16 +458,16 @@ antes de regar novamente.
 
 <section id="cuidados">
 
-<h2 class="titulo">💚 Como cuidar?</h2>
+<h2 class="titulo">💚 Como cuidar do alecrim?</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<h3>☀️ Luz</h3>
+<h3>☀️ Iluminação</h3>
 
 <p>
-Deixe a planta em um local bem iluminado e ensolarado.
+Mantenha a planta em um local com boa iluminação.
 </p>
 
 </div>
@@ -491,10 +475,10 @@ Deixe a planta em um local bem iluminado e ensolarado.
 
 <div class="card">
 
-<h3>💧 Rega</h3>
+<h3>💧 Água</h3>
 
 <p>
-Evite excesso de água. O solo deve possuir boa drenagem.
+Evite o excesso de água e mantenha uma boa drenagem.
 </p>
 
 </div>
@@ -505,8 +489,7 @@ Evite excesso de água. O solo deve possuir boa drenagem.
 <h3>✂️ Poda</h3>
 
 <p>
-Podas leves podem ajudar a manter a planta organizada
-e estimular novos ramos.
+Podas leves podem ajudar a manter a planta organizada.
 </p>
 
 </div>
@@ -517,8 +500,7 @@ e estimular novos ramos.
 <h3>🪴 Vaso</h3>
 
 <p>
-Se estiver em vaso, certifique-se de que existam furos
-para a saída da água.
+Use um vaso com furos para permitir a saída da água.
 </p>
 
 </div>
@@ -540,9 +522,9 @@ para a saída da água.
 
 <p style="margin-top:15px; line-height:1.8;">
 
-O alecrim é conhecido há muito tempo como uma erva aromática.
-Suas folhas podem ser utilizadas para dar aroma e sabor
-a diferentes preparações culinárias.
+O alecrim é utilizado há muito tempo como erva aromática
+e suas folhas são usadas para dar aroma e sabor a diferentes
+preparações culinárias.
 
 </p>
 
@@ -560,7 +542,7 @@ a diferentes preparações culinárias.
 <div class="quiz">
 
 <h3>
-Qual dessas condições é geralmente adequada para o alecrim?
+Qual condição é adequada para o cultivo do alecrim?
 </h3>
 
 <br>
@@ -584,6 +566,8 @@ Qual dessas condições é geralmente adequada para o alecrim?
 </section>
 
 
+<!-- RODAPÉ -->
+
 <footer>
 
 <h3>🌿 Mundo do Alecrim</h3>
@@ -601,63 +585,59 @@ Projeto educativo sobre o cultivo e os cuidados com o alecrim.
 
 <script>
 
-/* BOTÃO DE DICA */
+/* DICAS INTERATIVAS */
 
-const botao =
-document.getElementById("botaoPasso");
-
-const dica =
-document.getElementById("dica");
+const botao = document.getElementById("botaoPasso");
+const dica = document.getElementById("dica");
 
 let contador = 0;
 
 const dicas = [
 
-"💡 Dica: escolha um vaso com furos para evitar o acúmulo de água.",
+"💡 Escolha um vaso que tenha furos para evitar o acúmulo de água.",
 
-"☀️ Dica: o alecrim gosta de bastante luz solar.",
+"☀️ O alecrim gosta de bastante luz solar.",
 
-"💧 Dica: evite deixar o solo constantemente encharcado.",
+"💧 Evite deixar o solo constantemente encharcado.",
 
-"🌱 Dica: use um solo com boa drenagem."
+"🌱 Um solo com boa drenagem ajuda no cultivo da planta."
 
 ];
 
-botao.addEventListener("click", function(){
+botao.addEventListener("click", function() {
 
-dica.textContent = dicas[contador];
+    dica.textContent = dicas[contador];
 
-contador++;
+    contador++;
 
-if(contador >= dicas.length){
-contador = 0;
-}
+    if (contador >= dicas.length) {
+        contador = 0;
+    }
 
 });
 
 
 /* QUIZ */
 
-function responder(correta){
+function responder(correta) {
 
-const resultado =
-document.getElementById("resultado");
+    const resultado = document.getElementById("resultado");
 
-if(correta){
+    if (correta) {
 
-resultado.textContent =
-"🎉 Parabéns! Você acertou! O alecrim geralmente se desenvolve bem com bastante luz e solo bem drenado.";
+        resultado.textContent =
+        "🎉 Parabéns! Você acertou!";
 
-resultado.style.color = "green";
+        resultado.style.color = "green";
 
-}else{
+    } else {
 
-resultado.textContent =
-"❌ Essa não é a resposta. Tente novamente!";
+        resultado.textContent =
+        "❌ Essa não é a resposta. Tente novamente!";
 
-resultado.style.color = "red";
+        resultado.style.color = "red";
 
-}
+    }
 
 }
 
