@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌿 Mundo do Alecrim</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f3f8ef;
+    color: #263b2a;
+}
+
+/* CAPA */
+header {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+
+    background:
+    linear-gradient(rgba(25,75,40,.65), rgba(20,55,30,.8)),
+    url("https://images.unsplash.com/photo-1596547609652-9cf5d8e8b3d8?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    max-width: 850px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px black;
+}
+
+.hero p {
+    font-size: 21px;
+    line-height: 1.6;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: #d9e96b;
+    color: #18351f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.botao:hover {
+    transform: scale(1.08);
+    background: white;
+}
+
+/* MENU */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #236b35;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px #0003;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #d9e96b;
+}
+
+/* SEÇÕES */
+section {
+    padding: 70px 8%;
+}
+
+.titulo {
+    text-align: center;
+    color: #236b35;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.texto {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* IMAGEM */
+.imagem {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+    object-fit: cover;
+    margin: 35px auto;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px #0003;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px #0002;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #236b35;
+    margin-bottom: 12px;
+}
+
+/* PLANTIO */
+.plantio {
+    background: #dcefd5;
+}
+
+.passos {
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.passo {
+    background: white;
+    padding: 22px;
+    margin: 15px 0;
+    border-left: 7px solid #3e8d46;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0002;
+    transition: .3s;
+}
+
+.passo:hover {
+    transform: translateX(8px);
+}
+
+.passo h3 {
+    color: #236b35;
+    margin-bottom: 8px;
+}
+
+/* BOTÃO DO PLANTIO */
+#botaoPasso {
+    display: block;
+    margin: 25px auto;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #236b35;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#botaoPasso:hover {
+    background: #174a24;
+}
+
+/* QUIZ */
+.quiz {
+    max-width: 700px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #0002;
+    text-align: center;
+}
+
+.quiz button {
+    width: 100%;
+    padding: 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    background: #e4f1df;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quiz button:hover {
+    background: #c8e4c0;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/* CURIOSIDADE */
+.curiosidade {
+    background: #d9e96b;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+footer {
+    background: #174a24;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+/* CELULAR */
+@media(max-width:600px) {
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    .imagem {
+        height: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>🌿 Mundo do Alecrim</h1>
+
+<p>
+Descubra o que é o alecrim e aprenda, de forma simples,
+como plantar e cuidar dessa planta aromática.
+</p>
+
+<a href="#sobre" class="botao">
+🌱 Começar
+</a>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="#sobre">Sobre</a>
+<a href="#plantio">Plantar</a>
+<a href="#cuidados">Cuidados</a>
+<a href="#curiosidades">Curiosidades</a>
+<a href="#quiz">Quiz</a>
+
+</nav>
+
+
+<!-- SOBRE -->
+
+<section id="sobre">
+
+<h2 class="titulo">🌿 O que é o alecrim?</h2>
+
+<p class="texto">
+
+O alecrim é uma planta aromática conhecida atualmente pelo nome
+científico <i>Salvia rosmarinus</i>. Ele pertence à família
+Lamiaceae e possui folhas estreitas e bastante aromáticas.
+
+É uma planta muito utilizada na culinária e também cultivada
+em jardins e vasos.
+
+</p>
+
+<img
+class="imagem"
+src="https://images.unsplash.com/photo-1596547609652-9cf5d8e8b3d8?auto=format&fit=crop&w=1200&q=80"
+alt="Planta de alecrim"
+>
+
+</section>
+
+
+<!-- CARACTERÍSTICAS -->
+
+<section>
+
+<h2 class="titulo">🔎 Características</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🌱 Folhas</h3>
+
+<p>
+Suas folhas são estreitas, alongadas e possuem um aroma marcante.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>☀️ Sol</h3>
+
+<p>
+O alecrim gosta de locais bem iluminados e com bastante luz solar.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌸 Flores</h3>
+
+<p>
+Pode produzir pequenas flores em tons azulados, lilases ou
+esbranquiçados.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌿 Aroma</h3>
+
+<p>
+Seu aroma característico está relacionado aos óleos essenciais
+presentes na planta.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLANTIO -->
+
+<section id="plantio" class="plantio">
+
+<h2 class="titulo">🌱 Como plantar alecrim?</h2>
+
+<p class="texto">
+
+Você pode plantar alecrim em um vaso ou diretamente no jardim.
+Confira o passo a passo:
+
+</p>
+
+<div class="passos">
+
+<div class="passo">
+
+<h3>1️⃣ Escolha o local</h3>
+
+<p>
+Escolha um lugar bem iluminado, de preferência onde a planta
+receba bastante sol.
+</p>
+
+</div>
+
+
+<div class="passo">
+
+<h3>2️⃣ Prepare o vaso</h3>
+
+<p>
+Use um vaso com furos na parte inferior para permitir que
+o excesso de água escorra.
+</p>
+
+</div>
+
+
+<div class="passo">
+
+<h3>3️⃣ Prepare a terra</h3>
+
+<p>
+Utilize um substrato ou solo que tenha boa drenagem.
+Evite terra que fique constantemente encharcada.
+</p>
+
+</div>
+
+
+<div class="passo">
+
+<h3>4️⃣ Plante</h3>
+
+<p>
+O alecrim pode ser cultivado por sementes ou por estacas
+de uma planta saudável.
+</p>
+
+</div>
+
+
+<div class="passo">
+
+<h3>5️⃣ Regue</h3>
+
+<p>
+Faça uma rega moderada. Espere o solo perder parte da umidade
+antes de regar novamente.
+</p>
+
+</div>
+
+</div>
+
+
+<button id="botaoPasso">
+🌱 Mostrar dica de plantio
+</button>
+
+<p id="dica" class="texto"></p>
+
+</section>
+
+
+<!-- CUIDADOS -->
+
+<section id="cuidados">
+
+<h2 class="titulo">💚 Como cuidar?</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>☀️ Luz</h3>
+
+<p>
+Deixe a planta em um local bem iluminado e ensolarado.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💧 Rega</h3>
+
+<p>
+Evite excesso de água. O solo deve possuir boa drenagem.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✂️ Poda</h3>
+
+<p>
+Podas leves podem ajudar a manter a planta organizada
+e estimular novos ramos.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🪴 Vaso</h3>
+
+<p>
+Se estiver em vaso, certifique-se de que existam furos
+para a saída da água.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CURIOSIDADES -->
+
+<section id="curiosidades">
+
+<h2 class="titulo">✨ Curiosidades</h2>
+
+<div class="curiosidade">
+
+<h2>🌿 Você sabia?</h2>
+
+<p style="margin-top:15px; line-height:1.8;">
+
+O alecrim é conhecido há muito tempo como uma erva aromática.
+Suas folhas podem ser utilizadas para dar aroma e sabor
+a diferentes preparações culinárias.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section id="quiz">
+
+<h2 class="titulo">🧠 Quiz do Alecrim</h2>
+
+<div class="quiz">
+
+<h3>
+Qual dessas condições é geralmente adequada para o alecrim?
+</h3>
+
+<br>
+
+<button onclick="responder(false)">
+🌊 Solo sempre encharcado
+</button>
+
+<button onclick="responder(true)">
+☀️ Local iluminado e solo bem drenado
+</button>
+
+<button onclick="responder(false)">
+🌑 Local completamente escuro
+</button>
+
+<p id="resultado"></p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<h3>🌿 Mundo do Alecrim</h3>
+
+<p style="margin-top:10px;">
+Projeto educativo sobre o cultivo e os cuidados com o alecrim.
+</p>
+
+<p style="margin-top:15px;">
+© 2026 - Projeto Educacional
+</p>
+
+</footer>
+
+
+<script>
+
+/* BOTÃO DE DICA */
+
+const botao =
+document.getElementById("botaoPasso");
+
+const dica =
+document.getElementById("dica");
+
+let contador = 0;
+
+const dicas = [
+
+"💡 Dica: escolha um vaso com furos para evitar o acúmulo de água.",
+
+"☀️ Dica: o alecrim gosta de bastante luz solar.",
+
+"💧 Dica: evite deixar o solo constantemente encharcado.",
+
+"🌱 Dica: use um solo com boa drenagem."
+
+];
+
+botao.addEventListener("click", function(){
+
+dica.textContent = dicas[contador];
+
+contador++;
+
+if(contador >= dicas.length){
+contador = 0;
+}
+
+});
+
+
+/* QUIZ */
+
+function responder(correta){
+
+const resultado =
+document.getElementById("resultado");
+
+if(correta){
+
+resultado.textContent =
+"🎉 Parabéns! Você acertou! O alecrim geralmente se desenvolve bem com bastante luz e solo bem drenado.";
+
+resultado.style.color = "green";
+
+}else{
+
+resultado.textContent =
+"❌ Essa não é a resposta. Tente novamente!";
+
+resultado.style.color = "red";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
